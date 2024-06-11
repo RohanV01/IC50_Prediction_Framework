@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+        }
+        a.button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.button:hover {
+            background-color: #45a049;
+        }
+        a.button:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Results</h1>
+    <div>{{ data|safe }}</div> <!-- 'safe' filter allows HTML rendering -->
+    <a href="/download-data" class="button">Download CSV</a>
+</body>
+</html>

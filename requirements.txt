@@ -1,0 +1,10 @@
+numpy
+pandas
+rdkit
+chembl-client
+tqdm
+pyopenssl
+ndg-httpsclient
+pyasn1
+chembl_webresource_client
+padelpy
