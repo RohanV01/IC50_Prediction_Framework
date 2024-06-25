@@ -8,3 +8,4 @@ ndg-httpsclient
 pyasn1
 chembl_webresource_client
 padelpy
+streamlit
