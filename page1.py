@@ -105,7 +105,7 @@ def compute_padel_fingerprints(smi_file_path, output_dir):
             st.write(f"Error computing fingerprints for {fingerprint}: {e}")
 
 def compute_rdkit_fingerprints(smi_file_path, output_dir):
-    df_smiles = pd.read_csv(smi_file_path, header=None, names=['smiles'])
+    df_smiles = pd.read_csv(smi_file_path, header=None, names=['smiles' , 'canonical_smiles' , 'SMILES'])
     mols = [Chem.MolFromSmiles(smiles) for smiles in df_smiles['smiles']]
 
     morgan_fps = [AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=2048) for m in mols]
@@ -248,7 +248,7 @@ def read_input_file(uploaded_file):
 
 def get_smiles_column(df):
     for col in df.columns:
-        if col.lower() in ['canonical_smiles', 'smiles', 'SMILES']:
+        if col.lower() in ['canonical_smiles', 'smiles', 'smile']:
             return col
     raise ValueError("No SMILES column found in the input file")
 
@@ -302,6 +302,7 @@ def process_smiles_file(uploaded_file):
         return results_file
 
 def main():
+    st.set_page_config(page_icon="🧪" , page_title="IC50 analysis and Prediction")
     st.title('QSAR using advanced ML algorithms')
 
     st.markdown("""
