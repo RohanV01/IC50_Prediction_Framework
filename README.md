@@ -1,4 +1,4 @@
-# QSAR Web App
+# IC50 Prediction Web Application
 
 This project is a comprehensive web application for performing Quantitative Structure-Activity Relationship (QSAR) analysis using Streamlit. The application allows users to fetch bioactivity data from a ChEMBL database, compute molecular fingerprints, and train machine learning models for regression and classification tasks. It supports SMILES input files and outputs predictions based on trained models.
 
